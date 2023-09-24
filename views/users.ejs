@@ -1,0 +1,22 @@
+<!-- views/users.ejs -->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Kullanıcılar</title>
+</head>
+<body>
+  <h1>Kullanıcılar</h1>
+  
+    <ul>
+        <% users.forEach(user => { %>
+          <li><%= user.name %></li>
+        <% }); %>
+      </ul>
+  
+  <form method="POST" action="/users">
+    <input type="text" name="name" placeholder="Kullanıcı adı" required>
+    <button type="submit">Kullanıcı Oluştur</button>
+  </form>
+</body>
+</html>
